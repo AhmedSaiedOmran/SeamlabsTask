@@ -1,0 +1,348 @@
+{
+	"info": {
+		"_postman_id": "d00113ff-1457-4674-9384-981d1a621e0c",
+		"name": "SeamLabs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24919573"
+	},
+	"item": [
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "Numbers Without 5",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/numbers-without-5?start_number=40&end_number=66",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"numbers-without-5"
+							],
+							"query": [
+								{
+									"key": "start_number",
+									"value": "40"
+								},
+								{
+									"key": "end_number",
+									"value": "66"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Index Of String",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/index-of-string?input_string=AZA",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"index-of-string"
+							],
+							"query": [
+								{
+									"key": "input_string",
+									"value": "AZA"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Calculate Steps",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/calculate-steps?N=2&Q=3,4",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"calculate-steps"
+							],
+							"query": [
+								{
+									"key": "N",
+									"value": "2"
+								},
+								{
+									"key": "Q",
+									"value": "3,4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Restaurant",
+			"item": [
+				{
+					"name": "Get Menu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/restaurant/get-menu",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restaurant",
+								"get-menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Dine-In Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "dine-in",
+									"type": "text"
+								},
+								{
+									"key": "menu_items[1][id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "menu_items[1][qty]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "menu_items[2][id]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "menu_items[2][qty]",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "table_number",
+									"value": "T7",
+									"type": "default"
+								},
+								{
+									"key": "waiter_name",
+									"value": "Test Waiter",
+									"type": "default"
+								},
+								{
+									"key": "service_charge",
+									"value": "10",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/restaurant/make-order",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restaurant",
+								"make-order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Delivery Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "delivery",
+									"type": "text"
+								},
+								{
+									"key": "menu_items[1][id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "menu_items[1][qty]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "menu_items[2][id]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "menu_items[2][qty]",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "customer_name",
+									"value": "Ahmed Omran",
+									"type": "default"
+								},
+								{
+									"key": "customer_phone",
+									"value": "01111807671",
+									"type": "default"
+								},
+								{
+									"key": "delivery_fees",
+									"value": "20",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/restaurant/make-order",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restaurant",
+								"make-order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Takeaway Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "takeaway",
+									"type": "text"
+								},
+								{
+									"key": "menu_items[1][id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "menu_items[1][qty]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "menu_items[2][id]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "menu_items[2][qty]",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/restaurant/make-order",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restaurant",
+								"make-order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/restaurant/order/3",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"restaurant",
+								"order",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://seamlabs.local",
+			"type": "default"
+		},
+		{
+			"key": "port",
+			"value": "80",
+			"type": "default"
+		}
+	]
+}
