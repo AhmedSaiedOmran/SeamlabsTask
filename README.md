@@ -5,7 +5,7 @@
 
     1.1. Count numbers except numbers contains 5.
    
-    1.2. Index of this string.
+    1.2. Index of string.
 
     1.3. Steps Counter.
 2. Resturant Order API

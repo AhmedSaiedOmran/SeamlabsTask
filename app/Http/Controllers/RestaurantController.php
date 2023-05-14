@@ -98,8 +98,6 @@ class RestaurantController extends Controller
                 ApiResponseHelper::createSuccessResponse("Order Created Successfully!",$Order->JsonData()),
                 201
             );
-
-            # code...
         }else{
             return response()->json(
                 ApiResponseHelper::createErrorResponse("Something Wrong Happened!",["Order Not Created"]),
